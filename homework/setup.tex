@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+
+\usepackage[paper=letterpaper, margin=0.5in, footskip=0.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usetikzlibrary{calc,karnaugh,positioning}
+\usepackage[american]{circuitikz}
+\usepackage{setspace}
+\usepackage{siunitx}
+\usepackage{changepage}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
+
+\pgfplotsset{compat=newest}
+\tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
+
+\newcommand{\prob}{\section{}}
+\renewcommand{\thesubsection}{\alph{subsection}}
+\newenvironment{ppart}{\subsection{}\adjustwidth{\parindent}{0pt}}{\endadjustwidth}
+
+\titleformat{\section}{}{\Large\textbf{Problem \thesection.}}{0em}{}
+\titleformat{\subsection}{}{\large\textbf{Part \thesubsection)}}{0em}{}
+\titlespacing*{\section}{0em}{1em}{0em}
+\titlespacing*{\subsection}{\parindent}{1em}{0em}
+
+\makeatletter
+\def\@maketitle{
+	\centering
+	\LARGE \textbf \@title
+	\par
+	\Large \@author
+	\par
+	\monthyeardate\today
+	\vskip 1em
+}\makeatother
