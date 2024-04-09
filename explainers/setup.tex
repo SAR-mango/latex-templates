@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+
+\usepackage[paper=letterpaper, margin=0.5in, footskip=0.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usetikzlibrary{calc,karnaugh,positioning}
+\usepackage[american]{circuitikz}
+\usepackage{siunitx}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{makecell}
+
+\pgfplotsset{compat=newest}
+\pgfplotsset{
+	standard/.style={
+		trig format=rad,
+		axis x line=middle,
+		axis y line=middle,
+		enlarge x limits=0.1,
+		enlarge y limits=0.1,
+		x label style={right},
+		y label style={above},
+		axis line style={-Stealth,semithick},
+		major tick style={thick,black},
+		extra x tick labels={\empty},
+		extra y tick labels={\empty}
+	}
+}
+
+\tikzset{every karnaugh/.style={
+	American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}
+}}
+\tikzset{
+	grp/.style n args={3}{#1,fill=#1!30,
+	minimum width=#2\kmunitlength,
+	minimum height=#3\kmunitlength,
+	rounded corners=0.2\kmunitlength,
+	fill opacity=0.6,
+	rectangle,draw}
+}
+
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{1em}
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
+
+\makeatletter
+\def\@maketitle{
+	\centering
+	\LARGE\textbf \@title
+	\par
+	\large \@author
+	\par
+	\monthyeardate\today
+	\vskip 1em
+}\makeatother
