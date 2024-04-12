@@ -25,15 +25,16 @@
 
 \newcommand{\prob}{\section{}}
 \renewcommand{\thesubsection}{\alph{subsection}}
+\renewcommand{\thesubsubsection}{\roman{subsubsection}}
 \newenvironment{ppart}{\subsection{}\adjustwidth{\parindent}{0pt}}{\endadjustwidth}
-\newenvironment{spart}{\part{}\adjustwidth{2\parindent}{0pt}}{\endadjustwidth}
+\newenvironment{spart}{\subsubsection{}\adjustwidth{2\parindent}{0pt}}{\endadjustwidth}
 
 \titleformat{\section}{}{\large\textbf{Problem \thesection.}}{0em}{}
 \titleformat{\subsection}{}{\textbf{Part \thesubsection)}}{0em}{}
-\titleformat{\part}{}{\thepart.}{0em}{}
+\titleformat{\subsubsection}{}{\thesubsubsection.}{0em}{}
 \titlespacing*{\section}{0em}{1em}{0em}
 \titlespacing*{\subsection}{\parindent}{1em}{0em}
-\titlespacing*{\part}{2\parindent}{1em}{0em}
+\titlespacing*{\subsubsection}{2\parindent}{1em}{0em}
 
 \makeatletter
 \def\@maketitle{
