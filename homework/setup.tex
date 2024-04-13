@@ -19,7 +19,16 @@
 \usepackage{makecell}
 
 \pgfplotsset{compat=newest}
+
 \tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
+\tikzset{
+	grp/.style n args={3}{#1,
+		thick,
+		minimum width=#2\kmunitlength,
+		minimum height=#3\kmunitlength,
+		rounded corners=0.2\kmunitlength,
+		rectangle,draw}
+}
 
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 
