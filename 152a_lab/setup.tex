@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\usepackage[paper=letterpaper, margin=0.5in, footskip=0.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usetikzlibrary{calc,karnaugh,positioning}
+\usepackage[american]{circuitikz}
+\usepackage{siunitx}
+\usepackage{changepage}
+\usepackage{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage{makecell}
+\usepackage{trace}
+\usepackage{listings}
+
+% for verilog code coloring
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+
+\lstdefinestyle{verilog-style}
+{
+	language=Verilog,
+	basicstyle=\small\ttfamily,
+	keywordstyle=\color{vblue},
+	identifierstyle=\color{black},
+	commentstyle=\color{vgreen},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	numbersep=10pt,
+	tabsize=8,
+	moredelim=*[s][\colorIndex]{[}{]},
+	literate=*{:}{:}1
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+	\edef\@temp{\the\lst@token}%
+	\ifx\@temp\@lbracket \color{black}%
+	\else\ifx\@temp\@rbracket \color{black}%
+	\else\ifx\@temp\@colon \color{black}%
+	\else \color{vorange}%
+	\fi\fi\fi
+}
+\makeatother
+
+\graphicspath{{./images}}
+
+\tikzset{every karnaugh/.style={
+	American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}
+}}
+\tikzset{
+	grp/.style n args={3}{#1,
+	thick,
+	minimum width=#2\kmunitlength,
+	minimum height=#3\kmunitlength,
+	rounded corners=0.2\kmunitlength,
+	rectangle,draw}
+}
+
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{1em}
+
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
+
+\newcommand{\labpart}{\section{}}
+\newcommand{\subpart}{\subsubsection{}}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+\newenvironment{step}{\subsection{}\adjustwidth{\parindent}{\parindent}}{\endadjustwidth}
+
+\titleformat{\section}{}{\Large\textbf{Part \thesection}}{0em}{}
+\titleformat{\subsection}{}{\large\textbf{Step \thesubsection}}{0em}{}
+\titleformat{\subsubsection}{}{\textbf{\thesubsubsection)}}{0em}{}
+\titlespacing*{\section}{0em}{1em}{0em}
+\titlespacing*{\subsection}{\parindent}{1em}{0em}
+\titlespacing*{\subsubsection}{0em}{1em}{0em}
+
+\makeatletter
+\def\@maketitle{
+	\centering
+	\LARGE \@title
+	\par
+	\Large \@author
+	\par
+	\monthyeardate\today
+	\vskip 1em
+}\makeatother
