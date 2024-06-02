@@ -36,17 +36,15 @@
 \newcommand{\prob}{\section{}}
 \renewcommand{\thesubsection}{\alph{subsection}}
 \renewcommand{\thesubsubsection}{\roman{subsubsection}}
-%\newenvironment{ppart}{\subsection{}\adjustwidth{\parindent}{\parindent}}{\endadjustwidth}
-%\newenvironment{spart}{\subsubsection{}\adjustwidth{2\parindent}{2\parindent}}{\endadjustwidth}
-\newenvironment{ppart}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
-\newenvironment{spart}{\adjustwidth{2\parindent}{2\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
+\newenvironment{pp}{\adjustwidth{2\parindent}{2\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
+\newenvironment{spart}{\adjustwidth{3\parindent}{3\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
 
 \titleformat{\section}{}{\large\textbf{Problem \thesection.}}{0em}{}
 \titleformat{\subsection}[runin]{}{\textbf{(\thesubsection)}}{0em}{}
 \titleformat{\subsubsection}[runin]{}{\thesubsubsection.}{0em}{}
 \titlespacing*{\section}{0em}{1em}{0em}
-\titlespacing*{\subsection}{\parindent}{0.5em}{1ex}
-\titlespacing*{\subsubsection}{2\parindent}{0.5em}{1ex}
+\titlespacing*{\subsection}{-\parindent-1ex}{0.5em}{1ex}
+\titlespacing*{\subsubsection}{-\parindent+1ex}{0.5em}{1ex}
 
 \makeatletter
 \def\@maketitle{
