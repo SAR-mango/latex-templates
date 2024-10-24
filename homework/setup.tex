@@ -37,15 +37,15 @@
 \newcommand{\prob}{\section{}}
 \renewcommand{\thesubsection}{\alph{subsection}}
 \renewcommand{\thesubsubsection}{\roman{subsubsection}}
-\newenvironment{pp}{\adjustwidth{2\parindent}{2\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
-\newenvironment{spart}{\adjustwidth{2\parindent}{2\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
+\newenvironment{pp}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
+\newenvironment{spart}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
 
 \titleformat{\section}{}{\large\textbf{Problem \thesection.}}{0em}{}
 \titleformat{\subsection}[runin]{}{\textbf{(\thesubsection)}}{0em}{}
 \titleformat{\subsubsection}[runin]{}{\thesubsubsection.}{0em}{}
 \titlespacing*{\section}{0em}{1em}{0em}
-\titlespacing*{\subsection}{-\parindent}{0.5em}{1ex}
-\titlespacing*{\subsubsection}{-\parindent}{0.5em}{1ex}
+\titlespacing*{\subsection}{0em}{0.5em}{1ex}
+\titlespacing*{\subsubsection}{0em}{0.5em}{1ex}
 
 \makeatletter
 \def\@maketitle{
