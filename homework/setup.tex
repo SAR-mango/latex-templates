@@ -11,7 +11,7 @@
 \usepackage{pgfplots}
 \usetikzlibrary{calc,karnaugh,positioning}
 \usepackage[american]{circuitikz}
-\usepackage{siunitx}
+\usepackage[per-mode=fraction]{siunitx}
 \usepackage{changepage}
 \usepackage{datetime}
 \usepackage[T1]{fontenc}
@@ -22,15 +22,15 @@
 
 \pgfplotsset{compat=newest}
 
-\tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
-\tikzset{
-	grp/.style n args={3}{#1,
-		thick,
-		minimum width=#2\kmunitlength,
-		minimum height=#3\kmunitlength,
-		rounded corners=0.2\kmunitlength,
-		rectangle,draw}
-}
+%\tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
+%\tikzset{
+%	grp/.style n args={3}{#1,
+%		thick,
+%		minimum width=#2\kmunitlength,
+%		minimum height=#3\kmunitlength,
+%		rounded corners=0.2\kmunitlength,
+%		rectangle,draw}
+%}
 
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 
