@@ -1,43 +1,65 @@
 \documentclass[12pt]{article}
 
-\usepackage[paper=letterpaper, margin=0.5in, footskip=0.25in]{geometry}
+\usepackage[paper=letterpaper,margin=0.5in,footskip=0.25in]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{framed}
-\usepackage{xcolor}
-\usepackage{pgfplots}
-\usetikzlibrary{calc,karnaugh,positioning}
-\usepackage[american]{circuitikz}
-\usepackage{siunitx}
-\usepackage{changepage}
-\usepackage{datetime}
-\usepackage[T1]{fontenc}
-\usepackage{makecell}
-\usepackage{multicol}
-\usepackage{steinmetz}
+\usepackage{titlesec} % for custom title format
+%\usepackage{enumitem} % for lists
+%\usepackage{graphicx} % for including images, pdfs, etc.
+%\usepackage{framed}
+%\usepackage[dvipsnames]{xcolor} % for additional colors
+%\usepackage{pgfplots} % for plots
+%\usetikzlibrary{calc,karnaugh,positioning} % for tikz positioning help and k-maps
+%\usepackage[american]{circuitikz} % for circuits!
+\usepackage[per-mode=fraction,inter-unit-product=\ensuremath{{}\cdot{}}]{siunitx} % for nicely formatted units
+\usepackage{changepage} % for problem/part/subpart formatting
+\usepackage{datetime} % for custom date format
+\usepackage[T1]{fontenc} % everyone recommends to use this but idk what it's for
+\usepackage{mathtools} % for the Aboxed command, which lets you box things within the align environment
+%\usepackage{makecell} % for more complicated table formatting
+%\usepackage{steinmetz} % for the phase ("angle of") symbol
+%\usepackage{calc} % to perform arithmetic on spacing units
 
-\pgfplotsset{compat=newest}
+%\pgfplotsset{compat=newest}
 
-\tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
-\tikzset{
-	grp/.style n args={3}{#1,
-		thick,
-		minimum width=#2\kmunitlength,
-		minimum height=#3\kmunitlength,
-		rounded corners=0.2\kmunitlength,
-		rectangle,draw}
-}
+% to format matrices like tables; for example, [cc|c]. this lets you create an augmented matrix.
+%\makeatletter
+%\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+%	\hskip -\arraycolsep
+%	\let\@ifnextchar\new@ifnextchar
+%	\array{#1}}
+%\makeatother
 
+% k-map configuration
+%\tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
+%\tikzset{
+%	grp/.style n args={3}{#1,
+%		thick,
+%		minimum width=#2\kmunitlength,
+%		minimum height=#3\kmunitlength,
+%		rounded corners=0.2\kmunitlength,
+%		rectangle,draw}
+%}
+
+% date format
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 
-\titleformat{\section}{}{\large\textbf\thesection}{0em{\large\textbf. }}{\large\textbf}
-\titleformat{\subsection}{}{\textbf\thesubsection}{0em{\textbf: }}{\textbf}
-\titlespacing*{\section}{0em}{1em}{0.25em}
-\titlespacing*{\subsection}{0em}{1em}{0.25em}
+%% problem/part/subpart formatting
+%\newcommand{\prob}{\section{}}
+%\renewcommand{\thesubsection}{\alph{subsection}}
+%\renewcommand{\thesubsubsection}{\roman{subsubsection}}
+%\newenvironment{pp}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
+%\newenvironment{spart}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
 
+% redefine sections/subsections/subsubsections for problem/part/subpart
+\titleformat{\section}{}{\Large\textbf{\thesection.}}{0em}{\Large\textbf{ }\textbf}
+\titleformat{\subsection}{}{\textbf{\thesubsection:}}{0em}{\textbf{ }\textbf}
+\titleformat{\subsubsection}{}{\thesubsubsection}{0em}{ -- }
+\titlespacing*{\section}{0em}{1em}{0em}
+\titlespacing*{\subsection}{0em}{0.5em}{0em}
+\titlespacing*{\subsubsection}{0em}{0.5em}{0em}
+
+% title format
 \makeatletter
 \def\@maketitle{
 	\centering

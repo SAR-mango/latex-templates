@@ -1,3 +1,8 @@
+\DeclareMathOperator{\var}{Var}
+\let\union\cup
+\let\intersect\cap
+\let\w\omega
+
 \newcommand{\V}[1]{\text{V\textsubscript{#1}}}
 \newcommand{\Vv}[1]{\text{\textit{v}\textsubscript{#1}}}
 
@@ -21,6 +26,7 @@
 \newcommand{\qmv}[1]{\qty{#1}{\milli\volt}}
 \newcommand{\quv}[1]{\qty{#1}{\micro\volt}}
 \newcommand{\qnv}[1]{\qty{#1}{\nano\volt}}
+\newcommand{\qMv}[1]{\qty{#1}{\mega\volt}}
 
 \newcommand{\qa}[1]{\qty{#1}{\ampere}}
 \newcommand{\qma}[1]{\qty{#1}{\milli\ampere}}
@@ -32,21 +38,27 @@
 \newcommand{\qmw}[1]{\qty{#1}{\milli\watt}}
 \newcommand{\quw}[1]{\qty{#1}{\micro\watt}}
 \newcommand{\qnw}[1]{\qty{#1}{\nano\watt}}
+\newcommand{\qMw}[1]{\qty{#1}{\mega\watt}}
 
 \newcommand{\qj}[1]{\qty{#1}{\joule}}
 \newcommand{\qkj}[1]{\qty{#1}{\kilo\joule}}
 \newcommand{\qmj}[1]{\qty{#1}{\milli\joule}}
 \newcommand{\quj}[1]{\qty{#1}{\micro\joule}}
 \newcommand{\qnj}[1]{\qty{#1}{\nano\joule}}
+\newcommand{\qMj}[1]{\qty{#1}{\mega\joule}}
 
 \newcommand{\qr}[1]{\qty{#1}{\ohm}}
 \newcommand{\qkr}[1]{\qty{#1}{\kilo\ohm}}
 \newcommand{\qmr}[1]{\qty{#1}{\milli\ohm}}
+\newcommand{\qur}[1]{\qty{#1}{\micro\ohm}}
+\newcommand{\qnr}[1]{\qty{#1}{\nano\ohm}}
+\newcommand{\qMr}[1]{\qty{#1}{\mega\ohm}}
 
 \newcommand{\qf}[1]{\qty{#1}{\farad}}
 \newcommand{\qmf}[1]{\qty{#1}{\milli\farad}}
 \newcommand{\quf}[1]{\qty{#1}{\micro\farad}}
 \newcommand{\qnf}[1]{\qty{#1}{\nano\farad}}
+\newcommand{\qpf}[1]{\qty{#1}{\pico\farad}}
 
 \newcommand{\qh}[1]{\qty{#1}{\henry}}
 \newcommand{\qmh}[1]{\qty{#1}{\milli\henry}}
