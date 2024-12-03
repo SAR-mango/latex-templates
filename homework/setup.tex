@@ -70,11 +70,11 @@
 
 % redefine sections/subsections/subsubsections for problem/part/subpart
 \titleformat{\section}{}{\large\textbf{Problem \thesection.}}{0em}{}
-\titleformat{\subsection}[runin]{}{\textbf{(\thesubsection)}}{0em}{}
-\titleformat{\subsubsection}[runin]{}{\thesubsubsection.}{0em}{}
+\titleformat{\subsection}[runin]{}{\textbf{\makebox[4ex][l]{(\thesubsection)}}}{0em}{}
+\titleformat{\subsubsection}[runin]{}{\makebox[\parindent][l]{\thesubsubsection.}}{0em}{}
 \titlespacing*{\section}{0em}{1em}{0em}
-\titlespacing*{\subsection}{0em}{0.5em}{1ex}
-\titlespacing*{\subsubsection}{0em}{0.5em}{1ex}
+\titlespacing*{\subsection}{0em}{0.5em}{0em}
+\titlespacing*{\subsubsection}{0em}{0.5em}{0em}
 
 % title format
 \makeatletter
