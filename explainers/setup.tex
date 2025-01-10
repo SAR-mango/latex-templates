@@ -69,19 +69,25 @@
 %\newenvironment{spart}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
 
 % redefine sections/subsections/subsubsections for problem/part/subpart
-\titleformat{\section}{}{\Large\textbf{\thesection.}}{0em}{\Large\textbf{ }\textbf}
+\titleformat{\section}{}{\large\textbf{\thesection.}}{0em}{\large\textbf{ }\textbf}
 \titleformat{\subsection}{}{\textbf{\thesubsection:}}{0em}{\textbf{ }\textbf}
-\titleformat{\subsubsection}{}{\thesubsubsection}{0em}{ -- }
+\titleformat{\subsubsection}{}{\thesubsubsection}{0em}{\quad}
 \titlespacing*{\section}{0em}{1em}{0em}
 \titlespacing*{\subsection}{0em}{0.5em}{0em}
 \titlespacing*{\subsubsection}{0em}{0.5em}{0em}
+
+% for the ``class'' title parameter
+\makeatletter\def\@class{Class}
+\newcommand{\class}[1]{
+	\def\@class{#1}
+}\makeatother
 
 % title format
 \makeatletter
 \def\@maketitle{
 	\centering
-	\LARGE \@title \\
-	\Large \@author \\
+	\textbf{\@class{: }\@title} \\
+	\@author \\
 	\monthyeardate\today
-	\vskip 1em
+	\vskip\topskip
 }\makeatother
