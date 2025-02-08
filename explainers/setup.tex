@@ -18,11 +18,26 @@
 \usepackage{datetime} % for custom date format
 \usepackage[T1]{fontenc} % everyone recommends to use this but idk what it's for
 \usepackage{microtype} % typesetting enhancements
-\usepackage{mathtools} % for the Aboxed command, which lets you box things within the align environment
+\usepackage[theorems]{tcolorbox} % for beautiful yellow-background answer boxes
+%\usepackage{mathtools} % for the Aboxed command, which lets you box things within the align environment
 %\usepackage{makecell} % for more complicated table formatting
 %\usepackage{steinmetz} % for the phase ("angle of") symbol
 %\usepackage{calc} % to perform arithmetic on spacing units
 
+\definecolor{yorkyellow}{RGB}{255,255,208} % same color as in prof. york's slides
+
+% config for answer boxes
+\tcbset{
+	boxrule=0.5pt,
+	left=0.1cm,
+	right=0.1cm,
+	top=0.1cm,
+	bottom=0.1cm,
+	sharp corners,
+	colback=yorkyellow
+}
+
+% config for plots
 %\pgfplotsset{compat=newest}
 %\tikzset{>=Stealth}
 %\pgfplotsset{
