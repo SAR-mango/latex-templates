@@ -8,15 +8,15 @@ I use the homework template over 95% of the time.
 
 The explainers template is for short documents that explain a single concept. It's similar to the homework template, but problems/parts/subparts are not enumerated.
 
-The 152A lab template has (thankfully) not been touched since Spring 2024.
+The 152A lab template has (thankfully) not been touched since spring 2024.
 
 All three templates are strongly geared towards electrical engineering students.
 ## Features of the Homework Template
 This template has evolved into something fairly sophisticated and powerful over the past year. It contains several speed-enhancing features:
 ### Automatic problem/part/subpart enumeration
-- `\prob` to enumerate a problem, i.e. Problem 1, Problem 2,...
-- `pp` environment for a part of a problem, i.e. (a), (b),...
-- `spart` environment for a subpart of a part, i.e. i., ii.,...
+- `\prob` to enumerate a problem, i.e. Problem 1, Problem 2, ...
+- `pp` environment for a part of a problem, i.e. (a), (b), ...
+- `spart` environment for a subpart of a part, i.e. i., ii., ...
 ### Quantity commands
 Many commands are defined to make it easy to type quantities with properly-formatted units. For example:
 - `\quf{}` for microfarads
