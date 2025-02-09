@@ -36,7 +36,7 @@ There are some additional commands and shortcuts defined at the top of `commands
 - `\w` for `\omega`
 - `\e` for `\epsilon`
 - `\union` instead of `\cup` for the union symbol
-- `\intersect` instead of `\cap` for the union symbol
+- `\intersect` instead of `\cap` for the intersection symbol
 ### Boxed answers
 In math mode, `\ans{}` will put a nicely highlighted box around whatever is inside it. This makes your final answers very easy to locate, which is appreciated by TAs.
 ### Title and date
