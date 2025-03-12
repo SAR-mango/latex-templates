@@ -81,14 +81,14 @@
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 
 % problem/part/subpart formatting
-\newcommand{\prob}{\section{}}
+\newcommand{\prob}[1][]{\section{#1}}
 \renewcommand{\thesubsection}{\alph{subsection}}
 \renewcommand{\thesubsubsection}{\roman{subsubsection}}
 \newenvironment{pp}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
 \newenvironment{spart}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
 
 % redefine sections/subsections/subsubsections for problem/part/subpart
-\titleformat{\section}{}{\textbf{Problem \thesection.}}{0em}{}
+\titleformat{\section}{}{\textbf{Problem \thesection.}}{0em}{ \textbf}
 \titleformat{\subsection}[runin]{}{\textbf{\makebox[4ex][l]{(\thesubsection)}}}{0em}{}
 \titleformat{\subsubsection}[runin]{}{\makebox[\parindent][l]{\thesubsubsection.}}{0em}{}
 \titlespacing*{\section}{0em}{1em}{0em}
