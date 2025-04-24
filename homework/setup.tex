@@ -26,7 +26,8 @@
 %\usepackage{epsfig} % to include EPS figures from Matlab
 %\usepackage{matlab-prettifier} % for Matlab editor lstlisting template
 %\lstset{style=Matlab-editor,inputpath=code} % to include Matlab code
-%\usepackage{nicematrix}
+%\usepackage{nicematrix} % for nicely formatted matrices
+%\usepackage{systeme} % for nicely formatted systems of equations
 
 \definecolor{yorkyellow}{RGB}{255,255,208} % same color as in prof. york's slides
 
@@ -58,14 +59,6 @@
 %		extra y tick labels={\empty}
 %	}
 %}
-
-% to format matrices like tables; for example, [cc|c]. this lets you create an augmented matrix.
-%\makeatletter
-%\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-%	\hskip -\arraycolsep
-%	\let\@ifnextchar\new@ifnextchar
-%	\array{#1}}
-%\makeatother
 
 % k-map configuration
 %\tikzset{every karnaugh/.style={American style,kmlabel left/.style={black, font=\small, left=2pt}, kmlabel top/.style={black, font=\small, above=1pt}}}
