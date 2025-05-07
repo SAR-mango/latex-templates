@@ -1,4 +1,3 @@
-\DeclareMathOperator{\var}{Var}
 \let\union\cup
 \let\intersect\cap
 \let\w\omega
@@ -7,8 +6,15 @@
 \let\prefto\succ
 \let\nprefto\prec
 \let\ans\tcboxmath
-\newcommand{\real}[1]{\mathrm{Re}\{#1\}}
-\newcommand{\imag}[1]{\mathrm{Im}\{#1\}}
+
+\let\Re\relax
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Nul}{Nul}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\Row}{Row}
+\DeclareMathOperator{\tr}{tr}
 
 \newcommand{\V}[1]{V_{\mathrm{#1}}}
 \newcommand{\VR}[1]{V_{R_{\mathrm{#1}}}}
