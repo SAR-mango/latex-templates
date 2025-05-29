@@ -44,17 +44,17 @@ In math mode, `\ans{}` will put a nicely highlighted box around whatever is insi
 - `class` and `title` parameters in `homework.tex` can be set to create the title
 ### K-maps
 In `setup.tex`, uncomment `\usetikzlibrary{karnaugh}` and the `k-map configuration` section. Refer to the [documentation](https://ctan.org/pkg/tikz-karnaugh?lang=en) for more details.
-### Augmented matrices
-In `setup.tex`, uncomment the `augmented matrices` section. You can then create an augmented matrix with `\begin{bmatrix}[ccc|c]`..., where the bar would be to the right of the third column.
 ### Plots
 In `setup.tex`, uncomment `\usepackage{pgfplots}` and the `setup for plots` section. This gives a clean baseline configuration for plots.
 ### Other packages
 The following packages are commented out by default. To reduce compile time, only uncomment what you need.
-- `cancel` allows you to cancel out terms in math mode; for example `x + \cancel{0x} = 1`
-- `enumitem` allows you to configure bulleted and numbered lists
-- `graphicx` allows you to include images and PDFs
+- `cancel` allows you to cancel out terms in math mode; for example `x + \cancel{0x} = 1`.
+- `enumitem` allows you to configure bulleted and numbered lists.
+- `graphicx` allows you to include images and PDFs.
 - `xcolor` gives additional colors, and its predefined colors are more reasonable than the default ones.
 - `circuitikz` lets you draw circuits. Use [this website](https://circuit2tikz.tf.fau.de/designer/) to draw them graphically and obtain the TikZ code.
-- `steinmetz` lets you type the "angle of" symbol in math mode; for example, `\phase{H(s)}`
+- `steinmetz` lets you type the "angle of" symbol in math mode; for example, `\phase{H(s)}`.
 - `epsfig` lets you include `eps` figures generated from Matlab. These are vector graphics and they look excellent.
 - `matlab-prettifier` and the configuration line below it allow you to include Matlab code formatted as in Matlab.
+- `nicematrix` allows for extensive customization of matrices.
+- `systeme` allows for convenient formatting of systems of equations.
