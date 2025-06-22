@@ -7,7 +7,6 @@
 \usepackage{titlesec} % for custom title format
 %\usepackage{enumitem}[itemsep=0em,topsep=0em] % for lists
 %\usepackage{graphicx} % for including images, pdfs, etc.
-%\usepackage{framed}
 %\usepackage[dvipsnames]{xcolor} % for additional colors
 %\usepackage{pgfplots} % for plots
 %\usetikzlibrary{calc,positioning,arrows.meta} % for tikz positioning help and arrows
@@ -31,13 +30,16 @@
 
 \definecolor{yorkyellow}{RGB}{255,255,208} % same color as in prof. york's slides
 
+% set default graphics path to ``figs''
+%\graphicspath{{figs}}
+
 % config for answer boxes
 \tcbset{
 	boxrule=0.5pt,
-	left=0.1cm,
-	right=0.1cm,
-	top=0.1cm,
-	bottom=0.1cm,
+	left=0em,
+	right=0em,
+	top=0em,
+	bottom=0em,
 	sharp corners,
 	colback=yorkyellow
 }
