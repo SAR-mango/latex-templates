@@ -17,7 +17,6 @@
 \usepackage{datetime} % for custom date format
 \usepackage[T1]{fontenc} % everyone recommends to use this but idk what it's for
 \usepackage{microtype} % typesetting enhancements
-\usepackage[theorems]{tcolorbox} % for beautiful yellow-background answer boxes
 %\usepackage{mathtools} % for the Aboxed command, which lets you box things within the align environment
 %\usepackage{makecell} % for more complicated table formatting
 %\usepackage{steinmetz} % for the phase ("angle of") symbol
@@ -27,22 +26,6 @@
 %\lstset{style=Matlab-editor,inputpath=code} % to include Matlab code
 %\usepackage{nicematrix} % for nicely formatted matrices
 %\usepackage{systeme} % for nicely formatted systems of equations
-
-\definecolor{yorkyellow}{RGB}{255,255,208} % same color as in prof. york's slides
-
-% set default graphics path to ``figs''
-%\graphicspath{{figs}}
-
-% config for answer boxes
-\tcbset{
-	boxrule=0.5pt,
-	left=0em,
-	right=0em,
-	top=0em,
-	bottom=0em,
-	sharp corners,
-	colback=yorkyellow
-}
 
 % config for plots
 %\pgfplotsset{compat=newest}
