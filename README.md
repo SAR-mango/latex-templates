@@ -1,6 +1,6 @@
 ## LaTeX Templates
 This repository contains three templates:
-- Homework (primary file: `homework.tex`
+- Homework (primary file: `homework.tex`)
 - Explainers (primary file: `explainers.tex`)
 - Lab reports for ECE 152A (primary file: `152a_lab.tex`)
 
