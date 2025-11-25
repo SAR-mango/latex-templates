@@ -1,3 +1,4 @@
+% redefining existing commands
 \let\union\cup
 \let\intersect\cap
 \let\w\omega
@@ -5,8 +6,8 @@
 \let\ve\varepsilon
 \let\prefto\succ
 \let\nprefto\prec
-\let\ans\tcboxmath
 
+% math operators
 \let\Re\relax
 \DeclareMathOperator{\Re}{Re}
 \let\Im\relax
@@ -18,51 +19,56 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\rref}{rref}
 
-\newcommand{\V}[1]{V_{\mathrm{#1}}}
-\newcommand{\VR}[1]{V_{R_{\mathrm{#1}}}}
-\newcommand{\VL}[1]{V_{L_{\mathrm{#1}}}}
-\newcommand{\VC}[1]{V_{C_{\mathrm{#1}}}}
-\newcommand{\Vv}[1]{v_{\mathrm{#1}}}
+% subscript variable commands
+\newcommand{\V}[1]{V_{\text{#1}}}
+\newcommand{\VR}[1]{V_{R_{\text{#1}}}}
+\newcommand{\VL}[1]{V_{L_{\text{#1}}}}
+\newcommand{\VC}[1]{V_{C_{\text{#1}}}}
+\newcommand{\Vv}[1]{v_{\text{#1}}}
 
-\newcommand{\I}[1]{I_{\mathrm{#1}}}
-\newcommand{\IR}[1]{I_{R_{\mathrm{#1}}}}
-\newcommand{\IL}[1]{I_{L_{\mathrm{#1}}}}
-\newcommand{\IC}[1]{I_{C_{\mathrm{#1}}}}
-\newcommand{\Ii}[1]{i_{\mathrm{#1}}}
+\newcommand{\I}[1]{I_{\text{#1}}}
+\newcommand{\IR}[1]{I_{R_{\text{#1}}}}
+\newcommand{\IL}[1]{I_{L_{\text{#1}}}}
+\newcommand{\IC}[1]{I_{C_{\text{#1}}}}
+\newcommand{\Ii}[1]{i_{\text{#1}}}
 
-\renewcommand{\P}[1]{P_{\mathrm{#1}}}
-\newcommand{\PR}[1]{P_{R_{\mathrm{#1}}}}
-\newcommand{\PL}[1]{P_{L_{\mathrm{#1}}}}
-\newcommand{\PC}[1]{P_{C_{\mathrm{#1}}}}
+\renewcommand{\P}[1]{P_{\text{#1}}}
+\newcommand{\PR}[1]{P_{R_{\text{#1}}}}
+\newcommand{\PL}[1]{P_{L_{\text{#1}}}}
+\newcommand{\PC}[1]{P_{C_{\text{#1}}}}
 
-\newcommand{\U}[1]{U_{\mathrm{#1}}}
-\newcommand{\E}[1]{E_{\mathrm{#1}}}
+\newcommand{\U}[1]{U_{\text{#1}}}
+\newcommand{\E}[1]{E_{\text{#1}}}
 
-\newcommand{\A}[1]{A_{\mathrm{#1}}}
+\newcommand{\A}[1]{A_{\text{#1}}}
 
-\newcommand{\Z}[1]{Z_{\mathrm{#1}}}
-\newcommand{\R}[1]{R_{\mathrm{#1}}}
-\newcommand{\Rr}[1]{r_{\mathrm{#1}}}
-\newcommand{\C}[1]{C_{\mathrm{#1}}}
-\newcommand{\Ll}[1]{L_{\mathrm{#1}}}
+\newcommand{\Z}[1]{Z_{\text{#1}}}
+\newcommand{\R}[1]{R_{\text{#1}}}
+\newcommand{\Rr}[1]{r_{\text{#1}}}
+\newcommand{\C}[1]{C_{\text{#1}}}
+\newcommand{\Ll}[1]{L_{\text{#1}}}
 
+% quantity commands
 \newcommand{\qv}[1]{\qty{#1}{\volt}}
 \newcommand{\qkv}[1]{\qty{#1}{\kilo\volt}}
 \newcommand{\qmv}[1]{\qty{#1}{\milli\volt}}
 \newcommand{\quv}[1]{\qty{#1}{\micro\volt}}
 \newcommand{\qnv}[1]{\qty{#1}{\nano\volt}}
+\newcommand{\qpv}[1]{\qty{#1}{\pico\volt}}
 \newcommand{\qMv}[1]{\qty{#1}{\mega\volt}}
 
 \newcommand{\qa}[1]{\qty{#1}{\ampere}}
 \newcommand{\qma}[1]{\qty{#1}{\milli\ampere}}
 \newcommand{\qua}[1]{\qty{#1}{\micro\ampere}}
 \newcommand{\qna}[1]{\qty{#1}{\nano\ampere}}
+\newcommand{\qpa}[1]{\qty{#1}{\pico\ampere}}
 
 \newcommand{\qw}[1]{\qty{#1}{\watt}}
 \newcommand{\qkw}[1]{\qty{#1}{\kilo\watt}}
 \newcommand{\qmw}[1]{\qty{#1}{\milli\watt}}
 \newcommand{\quw}[1]{\qty{#1}{\micro\watt}}
 \newcommand{\qnw}[1]{\qty{#1}{\nano\watt}}
+\newcommand{\qpw}[1]{\qty{#1}{\pico\watt}}
 \newcommand{\qMw}[1]{\qty{#1}{\mega\watt}}
 
 \newcommand{\qj}[1]{\qty{#1}{\joule}}
@@ -70,6 +76,7 @@
 \newcommand{\qmj}[1]{\qty{#1}{\milli\joule}}
 \newcommand{\quj}[1]{\qty{#1}{\micro\joule}}
 \newcommand{\qnj}[1]{\qty{#1}{\nano\joule}}
+\newcommand{\qpj}[1]{\qty{#1}{\pico\joule}}
 \newcommand{\qMj}[1]{\qty{#1}{\mega\joule}}
 
 \newcommand{\qr}[1]{\qty{#1}{\ohm}}
@@ -84,11 +91,13 @@
 \newcommand{\quf}[1]{\qty{#1}{\micro\farad}}
 \newcommand{\qnf}[1]{\qty{#1}{\nano\farad}}
 \newcommand{\qpf}[1]{\qty{#1}{\pico\farad}}
+\newcommand{\qff}[1]{\qty{#1}{\femto\farad}}
 
 \newcommand{\qh}[1]{\qty{#1}{\henry}}
 \newcommand{\qmh}[1]{\qty{#1}{\milli\henry}}
 \newcommand{\quh}[1]{\qty{#1}{\micro\henry}}
 \newcommand{\qnh}[1]{\qty{#1}{\nano\henry}}
+\newcommand{\qph}[1]{\qty{#1}{\pico\henry}}
 
 \newcommand{\qhz}[1]{\qty{#1}{\hertz}}
 \newcommand{\qkhz}[1]{\qty{#1}{\kilo\hertz}}
@@ -122,3 +131,87 @@
 \newcommand{\qpc}[1]{\qty{#1}{\pico\coulomb}}
 
 \newcommand{\qdb}[1]{\qty{#1}{\decibel}}
+
+% dashed quantity commands
+\newcommand{\dqv}[1]{\text{#1-\si{\volt}}}
+\newcommand{\dqkv}[1]{\text{#1-\si{\kilo\volt}}}
+\newcommand{\dqmv}[1]{\text{#1-\si{\milli\volt}}}
+\newcommand{\dquv}[1]{\text{#1-\si{\micro\volt}}}
+\newcommand{\dqnv}[1]{\text{#1-\si{\nano\volt}}}
+\newcommand{\dqpv}[1]{\text{#1-\si{\pico\volt}}}
+\newcommand{\dqMv}[1]{\text{#1-\si{\mega\volt}}}
+
+\newcommand{\dqa}[1]{\text{#1-\si{\ampere}}}
+\newcommand{\dqma}[1]{\text{#1-\si{\milli\ampere}}}
+\newcommand{\dqua}[1]{\text{#1-\si{\micro\ampere}}}
+\newcommand{\dqna}[1]{\text{#1-\si{\nano\ampere}}}
+\newcommand{\dqpa}[1]{\text{#1-\si{\pico\ampere}}}
+
+\newcommand{\dqw}[1]{\text{#1-\si{\watt}}}
+\newcommand{\dqkw}[1]{\text{#1-\si{\kilo\watt}}}
+\newcommand{\dqmw}[1]{\text{#1-\si{\milli\watt}}}
+\newcommand{\dquw}[1]{\text{#1-\si{\micro\watt}}}
+\newcommand{\dqnw}[1]{\text{#1-\si{\nano\watt}}}
+\newcommand{\dqpw}[1]{\text{#1-\si{\pico\watt}}}
+\newcommand{\dqMw}[1]{\text{#1-\si{\mega\watt}}}
+
+\newcommand{\dqj}[1]{\text{#1-\si{\joule}}}
+\newcommand{\dqkj}[1]{\text{#1-\si{\kilo\joule}}}
+\newcommand{\dqmj}[1]{\text{#1-\si{\milli\joule}}}
+\newcommand{\dquj}[1]{\text{#1-\si{\micro\joule}}}
+\newcommand{\dqnj}[1]{\text{#1-\si{\nano\joule}}}
+\newcommand{\dqpj}[1]{\text{#1-\si{\pico\joule}}}
+\newcommand{\dqMj}[1]{\text{#1-\si{\mega\joule}}}
+
+\newcommand{\dqr}[1]{\text{#1-\si{\ohm}}}
+\newcommand{\dqkr}[1]{\text{#1-\si{\kilo\ohm}}}
+\newcommand{\dqmr}[1]{\text{#1-\si{\milli\ohm}}}
+\newcommand{\dqur}[1]{\text{#1-\si{\micro\ohm}}}
+\newcommand{\dqnr}[1]{\text{#1-\si{\nano\ohm}}}
+\newcommand{\dqMr}[1]{\text{#1-\si{\mega\ohm}}}
+
+\newcommand{\dqf}[1]{\text{#1-\si{\farad}}}
+\newcommand{\dqmf}[1]{\text{#1-\si{\milli\farad}}}
+\newcommand{\dquf}[1]{\text{#1-\si{\micro\farad}}}
+\newcommand{\dqnf}[1]{\text{#1-\si{\nano\farad}}}
+\newcommand{\dqpf}[1]{\text{#1-\si{\pico\farad}}}
+\newcommand{\dqff}[1]{\text{#1-\si{\femto\farad}}}
+
+\newcommand{\dqh}[1]{\text{#1-\si{\henry}}}
+\newcommand{\dqmh}[1]{\text{#1-\si{\milli\henry}}}
+\newcommand{\dquh}[1]{\text{#1-\si{\micro\henry}}}
+\newcommand{\dqnh}[1]{\text{#1-\si{\nano\henry}}}
+\newcommand{\dqph}[1]{\text{#1-\si{\pico\henry}}}
+
+\newcommand{\dqhz}[1]{\text{#1-\si{\hertz}}}
+\newcommand{\dqkhz}[1]{\text{#1-\si{\kilo\hertz}}}
+\newcommand{\dqMhz}[1]{\text{#1-\si{\mega\hertz}}}
+\newcommand{\dqGhz}[1]{\text{#1-\si{\giga\hertz}}}
+\newcommand{\dqThz}[1]{\text{#1-\si{\tera\hertz}}}
+
+\newcommand{\dqkm}[1]{\text{#1-\si{\kilo\meter}}}
+\newcommand{\dqm}[1]{\text{#1-\si{\meter}}}
+\newcommand{\dqcm}[1]{\text{#1-\si{\centi\meter}}}
+\newcommand{\dqmm}[1]{\text{#1-\si{\milli\meter}}}
+\newcommand{\dqum}[1]{\text{#1-\si{\micro\meter}}}
+\newcommand{\dqnm}[1]{\text{#1-\si{\nano\meter}}}
+\newcommand{\dqpm}[1]{\text{#1-\si{\pico\meter}}}
+
+\newcommand{\dqkg}[1]{\text{#1-\si{\kilo\gram}}}
+\newcommand{\dqg}[1]{\text{#1-\si{\gram}}}
+\newcommand{\dqmg}[1]{\text{#1-\si{\milli\gram}}}
+\newcommand{\dqug}[1]{\text{#1-\si{\micro\gram}}}
+
+\newcommand{\dqs}[1]{\text{#1-\si{\second}}}
+\newcommand{\dqms}[1]{\text{#1-\si{\milli\second}}}
+\newcommand{\dqus}[1]{\text{#1-\si{\micro\second}}}
+\newcommand{\dqns}[1]{\text{#1-\si{\nano\second}}}
+\newcommand{\dqps}[1]{\text{#1-\si{\pico\second}}}
+
+\newcommand{\dqc}[1]{\text{#1-\si{\coulomb}}}
+\newcommand{\dqmc}[1]{\text{#1-\si{\milli\coulomb}}}
+\newcommand{\dquc}[1]{\text{#1-\si{\micro\coulomb}}}
+\newcommand{\dqnc}[1]{\text{#1-\si{\nano\coulomb}}}
+\newcommand{\dqpc}[1]{\text{#1-\si{\pico\coulomb}}}
+
+\newcommand{\dqdb}[1]{\text{#1-\si{\decibel}}}
