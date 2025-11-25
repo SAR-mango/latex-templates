@@ -1,6 +1,6 @@
 ## LaTeX Templates
 This repository contains three templates:
-- Homework (primary file: `homework.tex`
+- Homework (primary file: `homework.tex`)
 - Explainers (primary file: `explainers.tex`)
 - Lab reports for ECE 152A (primary file: `152a_lab.tex`)
 
@@ -20,15 +20,15 @@ This template has evolved into something fairly sophisticated and powerful over 
 ### Quantity commands
 Many commands are defined to make it easy to type quantities with properly-formatted units. For example:
 - `\quf{}` for microfarads
-- `\qkr{}` for kilo-ohms
+- `\qkr{}` for kohms
 - `\qm{}` for meters
 - `\qGhz{}` for gigahertz
 
 There is a quantity command for almost any unit that an electrical engineering student would encounter. Refer to `commands.tex` to see exactly what is available.
 ### Subscript variable commands
 Variables for voltage, current, etc. almost always require a subscript. Many commands are defined to provide a math-mode variable with a *text-mode* subscript. For example:
-- `\V{in}` is equivalent to `V_{\mathrm{in}}`
-- `\Rr{ds}` is equivalent to `r_{\mathrm{ds}}` (small-signal drain-source resistance)
+- `\V{in}` is equivalent to `V_{\text{in}}`
+- `\Rr{ds}` is equivalent to `r_{\text{ds}}` (small-signal drain-source resistance)
 
 There is a subscript variable command for most variables an electrical engineering student would encounter. Refer to `commands.tex` to see exactly what is available.
 ### Other commands
@@ -37,8 +37,6 @@ There are some additional commands and shortcuts defined at the top of `commands
 - `\e` for `\epsilon`
 - `\union` instead of `\cup` for the union symbol
 - `\intersect` instead of `\cap` for the intersection symbol
-### Boxed answers
-In math mode, `\ans{}` will put a nicely highlighted box around whatever is inside it. This makes your final answers very easy to locate, which is appreciated by TAs.
 ### Title and date
 - Date automatically updates upon compilation
 - `class` and `title` parameters in `homework.tex` can be set to create the title
