@@ -18,23 +18,22 @@ This template has evolved into something fairly sophisticated and powerful over 
 - `pp` environment for a part of a problem, i.e. (a), (b), ...
 - `spart` environment for a subpart of a part, i.e. i., ii., ...
 ### Quantity commands
-Many commands are defined to make it easy to type quantities with properly-formatted units. For example:
+Many commands are defined to make it easy to type quantities with properly formatted units. For example:
 - `\quf{}` for microfarads
 - `\qkr{}` for kohms
 - `\qm{}` for meters
 - `\qGhz{}` for gigahertz
-
-There is a quantity command for almost any unit that an electrical engineering student would encounter. Refer to `commands.tex` to see exactly what is available.
+For maximal typing speed, capital letters are only used in metric prefixes such as M for mega and G for giga.
+### Dashed Quantity commands
+There are also commands for units as modifiers (for example, "a 1.8-kΩ resistor" could be written as `a \dqkr{1.8} resistor`). Each quantity command has a matching dashed quantity command.
 ### Subscript variable commands
-Variables for voltage, current, etc. almost always require a subscript. Many commands are defined to provide a math-mode variable with a *text-mode* subscript. For example:
+Variables for voltage, current, etc. almost always require a subscript. Commands are defined to provide a math-mode variable with a *text-mode* subscript. For example:
 - `\V{in}` is equivalent to `V_{\text{in}}`
 - `\Rr{ds}` is equivalent to `r_{\text{ds}}` (small-signal drain-source resistance)
-
-There is a subscript variable command for most variables an electrical engineering student would encounter. Refer to `commands.tex` to see exactly what is available.
 ### Other commands
 There are some additional commands and shortcuts defined at the top of `commands.tex`. For example:
 - `\w` for `\omega`
-- `\e` for `\epsilon`
+- `\e` for `\epsilon`, `\ve` for `\varepsilon`, 
 - `\union` instead of `\cup` for the union symbol
 - `\intersect` instead of `\cap` for the intersection symbol
 ### Title and date
