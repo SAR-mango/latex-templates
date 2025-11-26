@@ -16,17 +16,38 @@ This is the next paragraph.
 \subsubsection{Subsubsection}
 This is subsubsection.
 
-This is the next paragraph.
-\section{All over again...}
-This is a section.
+This is the next paragraph. \autoref{tab:tline_port_ext} is an example of table enumeration.
+\begin{center}
+	\begin{tabular}{r|cc}
+		& Port 1 extension & Port 2 extension \\
+		\hline
+		10-mm line & \qps{38.37} & \qps{48.94} \\
+		5-mm line & \qps{42.65} & \qps{50.44}
+	\end{tabular}
+	\captionof{table}{Port extensions for 10-mm and 5-mm transmission lines.}
+	\label{tab:tline_port_ext}
+\end{center}
 
-This is the next paragraph.
-\subsection{Subsection}
-This is subsection.
+\autoref{fig:tline_sim} is an example side-by-side figure.
+\begin{figure}[h]
+	\centering
+	\subfloat[10-mm transmission line]{
+		\centering
+		\includegraphics[width=0.4\linewidth]{example-image-a}
+	}
+	\hfill
+	\subfloat[5-mm transmission line]{
+		\centering
+		\includegraphics[width=0.4\linewidth]{example-image-b}
+	}
+	\caption{Simulated S parameters for each transmission line.}
+	\label{fig:tline_sim}
+\end{figure}
 
-This is the next paragraph.
-\subsubsection{Subsubsection}
-This is subsubsection.
-
-This is the next paragraph.
+\autoref{fig:ind} is an example of a single figure.
+\begin{center}
+	\includegraphics[width=0.3\linewidth]{example-image-c}
+	\captionof{figure}{Inductor soldered to 50-ohm transmission line for measurement.}
+	\label{fig:ind}
+\end{center}
 \end{document}

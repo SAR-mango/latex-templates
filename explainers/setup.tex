@@ -6,7 +6,7 @@
 %\usepackage{cancel}
 \usepackage{titlesec} % for custom title format
 %\usepackage{enumitem}[itemsep=0em,topsep=0em] % for lists
-%\usepackage{graphicx} % for including images, pdfs, etc.
+\usepackage{graphicx} % for including images, pdfs, etc.
 %\usepackage[dvipsnames]{xcolor} % for additional colors
 %\usepackage{pgfplots} % for plots
 %\usetikzlibrary{calc,positioning,arrows.meta} % for tikz positioning help and arrows
@@ -26,6 +26,16 @@
 %\lstset{style=Matlab-editor,inputpath=code} % to include Matlab code
 %\usepackage{nicematrix} % for nicely formatted matrices
 %\usepackage{systeme} % for nicely formatted systems of equations
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{newfloat}
+
+\hypersetup{colorlinks=true,linkcolor=blue}
+
+\DeclareFloatingEnvironment[name=Code Fragment]{codefrag}
+\providecommand{\codefragautorefname}{}
+\renewcommand{\codefragautorefname}{Code Fragment}
 
 % config for plots
 %\pgfplotsset{compat=newest}
