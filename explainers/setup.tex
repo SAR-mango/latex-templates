@@ -69,13 +69,6 @@
 % date format
 \newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 
-%% problem/part/subpart formatting
-%\newcommand{\prob}{\section{}}
-%\renewcommand{\thesubsection}{\alph{subsection}}
-%\renewcommand{\thesubsubsection}{\roman{subsubsection}}
-%\newenvironment{pp}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsection{}}{\endadjustwidth}
-%\newenvironment{spart}{\adjustwidth{\parindent}{\parindent}\mbox{}\vspace{-\baselineskip}\subsubsection{}}{\endadjustwidth}
-
 % redefine sections/subsections/subsubsections for problem/part/subpart
 \titleformat{\section}{}{\large\textbf{\thesection.}}{0em}{\large\textbf{ }\textbf}
 \titleformat{\subsection}{}{\textbf{\thesubsection\hspace{1ex}}}{0em}{\textbf{ }\textbf}
