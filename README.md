@@ -25,7 +25,7 @@ Many commands are defined to make it easy to type quantities with properly forma
 - `\qGhz{}` for gigahertz
 For maximal typing speed, capital letters are only used in metric prefixes such as M for mega and G for giga.
 ### Dashed Quantity commands
-There are also commands for units as modifiers (for example, "a 1.8-kΩ resistor" could be written as `a \dqkr{1.8} resistor`). Each quantity command has a matching dashed quantity command.
+There are also commands for units as modifiers. For example, "a 1.8-kΩ resistor" could be written as `a \dqkr{1.8} resistor`. Each quantity command has a matching dashed quantity command.
 ### Subscript variable commands
 Variables for voltage, current, etc. almost always require a subscript. Commands are defined to provide a math-mode variable with a *text-mode* subscript. For example:
 - `\V{in}` is equivalent to `V_{\text{in}}`
