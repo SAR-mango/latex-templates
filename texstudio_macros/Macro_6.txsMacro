@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 2,
+    "menu": "",
+    "name": "tabular",
+    "shortcut": "",
+    "tag": [
+        "tabular"
+    ],
+    "trigger": ",tab",
+    "type": "Environment"
+}

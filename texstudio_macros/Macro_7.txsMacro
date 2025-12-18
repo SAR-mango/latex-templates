@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 2,
+    "menu": "",
+    "name": "spart",
+    "shortcut": "",
+    "tag": [
+        "spart"
+    ],
+    "trigger": ",sp",
+    "type": "Environment"
+}

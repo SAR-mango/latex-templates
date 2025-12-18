@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 2,
+    "menu": "",
+    "name": "includegraphics",
+    "shortcut": "",
+    "tag": [
+        "\\includegraphics[]{}"
+    ],
+    "trigger": ",gfx",
+    "type": "Snippet"
+}

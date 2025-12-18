@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 2,
+    "menu": "",
+    "name": "shortintertext",
+    "shortcut": "",
+    "tag": [
+        "\\shortintertext{}"
+    ],
+    "trigger": ",sint",
+    "type": "Snippet"
+}

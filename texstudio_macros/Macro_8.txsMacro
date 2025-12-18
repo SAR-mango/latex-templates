@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 2,
+    "menu": "",
+    "name": "tikzpicture",
+    "shortcut": "",
+    "tag": [
+        "tikzpicture"
+    ],
+    "trigger": ",tikz",
+    "type": "Environment"
+}
