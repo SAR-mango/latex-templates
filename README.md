@@ -1,16 +1,17 @@
 ## LaTeX Templates
-This repository contains three templates:
+This repository contains four templates:
 - Homework (primary file: `homework.tex`)
 - Explainers (primary file: `explainers.tex`)
+- Lab reports for ECE 147B (primary file: `147b_lab.tex`)
 - Lab reports for ECE 152A (primary file: `152a_lab.tex`)
 
 I use the homework template over 95% of the time.
 
 The explainers template is for short documents that explain a single concept. It's similar to the homework template, but problems/parts/subparts are not enumerated.
 
-The 152A lab template has (thankfully) not been touched since spring 2024.
+The 147B and 152A lab report templates are for specific classes at UCSB.
 
-All three templates are strongly geared towards electrical engineering students.
+All templates are strongly geared towards electrical engineering students.
 ## Features of the Homework Template
 This template has evolved into something fairly sophisticated and powerful over the past year. It contains several speed-enhancing features:
 ### Automatic problem/part/subpart enumeration
