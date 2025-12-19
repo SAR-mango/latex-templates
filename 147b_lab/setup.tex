@@ -1,0 +1,59 @@
+\usepackage[paper=letterpaper,margin=0.5in,footskip=0.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{cancel}
+\usepackage{titlesec} % for custom title format
+%\usepackage{enumitem}
+\usepackage{graphicx} % for including images, pdfs, etc.
+\graphicspath{{figs}} % set default graphics path to ``figs''
+%\usepackage[dvipsnames]{xcolor} % for additional colors
+%\usepackage{pgfplots} % for plots
+%\usetikzlibrary{calc,positioning,arrows.meta} % for tikz positioning help and arrows
+%\usetikzlibrary{karnaugh} % for k-maps
+\usepackage[american]{circuitikz} % for circuits!
+\usepackage[per-mode=fraction,inter-unit-product=\ensuremath{{}\cdot{}}]{siunitx} % for nicely formatted units
+\usepackage{changepage} % for problem/part/subpart formatting
+\usepackage{datetime} % for custom date format
+\usepackage[T1]{fontenc} % everyone recommends to use this but idk what it's for
+\usepackage{microtype} % typesetting enhancements
+\usepackage{mathtools} % for the Aboxed command, which lets you box things within the align environment
+%\usepackage{makecell} % for more complicated table formatting
+%\usepackage{steinmetz} % for the phase ("angle of") symbol
+%\usepackage{calc} % to perform arithmetic on spacing units
+%\usepackage{epsfig} % to include EPS figures from Matlab
+\usepackage{matlab-prettifier} % for Matlab editor lstlisting template
+\usepackage{lstautogobble}
+\lstset{style=Matlab-editor,inputpath=code,aboveskip=0em,autogobble=true} % to include Matlab code
+\usepackage{systeme} % for nicely formatted systems of equations
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{newfloat}
+
+\hypersetup{colorlinks=true,linkcolor=blue}
+
+\DeclareFloatingEnvironment[name=Code Fragment]{codefrag}
+\providecommand{\codefragautorefname}{Code Fragment}
+
+% date format
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
+
+% for the ``class'' title parameter
+\makeatletter\def\@class{Class}
+\newcommand{\class}[1]{
+	\def\@class{#1}
+}\makeatother
+
+\titlespacing*{\section}{0em}{1em}{0.33em}
+\titlespacing*{\subsection}{0pt}{0.5em}{0em}
+\titlespacing*{\subsubsection}{0pt}{0.5em}{0em}
+
+% title format
+\makeatletter
+\def\@maketitle{
+	\centering
+	\textbf{\@class{ }\@title} \\
+	\@author \\
+	\monthyeardate\today
+	\vskip\topskip
+}\makeatother

@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\input{setup}
+\input{commands}
+\class{ECE 147B}
+\title{Lab $n$ Report Template}
+\author{Erk Sampat, Robert Kastaman, \ldots}
+\begin{document}
+\maketitle
+\section{Abstract}
+\label{sec:abstract}
+The abstract should clearly summarize \textit{all} sections. Refer to sections like this: \autoref{sec:prelab}. Refer to subsections like this: \autoref{subsec:procedure_wk1}.
+\section{Introduction}
+\label{sec:intro}
+The introduction is simply a more detailed version of the abstract.
+\section{Pre-Lab Exercises}
+\label{sec:prelab}
+\subsection{Week 1}
+\label{subsec:prelab_wk1}
+Probably some boring math here\ldots
+\subsection{Week 2}
+\label{subsec:prelab_wk2}
+and here as well. Align equations with equal signs like this:
+\begin{align*}
+	1 &= 1 \\
+	2 &= 2
+\end{align*}
+If desired, enumerate steps like this:
+\begin{enumerate}
+	\item Justify your answer; answers with no explanation will receive no credit.
+	\begin{enumerate}
+		\item Is the system $y(t)=\int_{0}^{t+1}x(\tau-1)d\tau$ causal?
+		\item Is the system $y(t)=tx(t^{2})$ linear?
+	\end{enumerate}
+	\item Consider the differential equation $y''+y=x$.
+	\begin{enumerate}
+		\item Determine the corresponding transfer function.
+		\item Determine the state-space representation of the system.
+	\end{enumerate}
+\end{enumerate}
+This style of enumeration may be used throughout the report.
+\section{Procedure}
+\label{sec:procedure}
+\subsection{Week 1}
+\label{subsec:procedure_wk1}
+Code-style text can be written like this: \texttt{rlocfind}. Refer to figures like this: \autoref{fig:example}. All figures must be in the \texttt{figs} directory.
+\begin{center}
+    \includegraphics[width=0.25\linewidth]{example-image-a}
+    \captionof{figure}{Example figure with a single graphic. It should usually be bigger (around \texttt{0.6\textbackslash linewidth}).}
+    \label{fig:example}
+\end{center}
+Refer to code fragments like this: \autoref{cf:example}.
+\begin{center}
+    \begin{lstlisting}
+        s = tf('s');
+        G = (s^4+3*s^2+2)/(6*s+9);
+        figure;
+        margin(G);
+    \end{lstlisting}
+    % alternatively, use \lstinputlisting{}. the input path is ``code''. you can use this to directly include a matlab file.
+    \captionof{codefrag}{Example code fragment.}
+    \label{cf:example}
+\end{center}
+\subsection{Week 2}
+\label{subsec:procedure_wk2}
+Rest of the procedure goes here.
+\section{Results}
+\label{sec:results}
+\subsection{Week 1}
+\label{subsec:results_wk1}
+Below is a crucial example of a figure with multiple graphics, each in its own subfigure:
+\begin{figure}[H]
+	\centering
+	\subfloat[Subfigure (a)]{
+		\label{subfig:example_a}
+		\centering
+		\includegraphics[width=0.45\linewidth]{example-image-a}
+	}\hfill
+	\subfloat[Subfigure (b)]{
+		\label{subfig:example_b}
+		\centering
+		\includegraphics[width=0.45\linewidth]{example-image-b}
+	}\\
+	\caption{Example figure with two graphics, each in its own subfigure.}
+	\label{fig:example2}
+\end{figure}
+\noindent Refer to the overall figure as before: \autoref{fig:example2}. Refer to each subfigure like this: \autoref{subfig:example_a}, \autoref{subfig:example_b}.
+\subsection{Week 2}
+\label{subsec:results_wk2}
+Probably many, many more plots here\ldots
+\section{Discussion}
+\label{sec:discussion}
+\subsection{Week 1}
+\label{subsec:discussion_wk1}
+This is the part where you turn off your brain and ask ChatGPT to explain your results.
+\subsection{Week 2}
+\label{subsec:discussion_wk2}
+Here as well. And you're done!
+\end{document}
