@@ -34,7 +34,7 @@ Variables for voltage, current, etc. almost always require a subscript. Commands
 ### Other commands
 There are some additional commands and shortcuts defined at the top of `commands.tex`. For example:
 - `\w` for `\omega`
-- `\e` for `\epsilon`, `\ve` for `\varepsilon`, 
+- `\e` for `\epsilon`, `\ve` for `\varepsilon`
 - `\union` instead of `\cup` for the union symbol
 - `\intersect` instead of `\cap` for the intersection symbol
 ### Title and date
