@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        ""
+    ],
+    "formatVersion": 2,
+    "menu": "",
+    "name": "subsubsection",
+    "shortcut": "",
+    "tag": [
+        "\\subsubsection{}"
+    ],
+    "trigger": ",ssubs",
+    "type": "Snippet"
+}
